@@ -7,18 +7,26 @@
 body { 
     background: -o-linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(164, 164, 180, 1) 50%, rgba(164, 164, 180, 1) 100%);
     background-color: rgb(164, 164, 180);
-    height: 100vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    overflow-x: hidden;
+}
     .login-form-container {
-        background: rgba(255, 255, 255, 0.8);
-        padding: 20px;
+        position: absolute;
+        top: 5%;
+        background: rgba(170, 213, 214, 0.8);
+        padding: 30px;
         border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        margin: 0 auto;
+        box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.1);
+        min-height: 50vh;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
         h2 {
             text-align: center;
@@ -62,42 +70,52 @@ body {
 }
 .Back-button a {
     color: #eeeeee;
-    
+    text-decoration: none;
 }
 .cross-grid { 
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(3, 200px);
 gap: 15px;
+box-sizing: border-box;
+border: 1px solid #4a4a4a;
+width: 100vw;
+height: 0.5rem;
 }
 
 .cross-grid .center-piece {
     grid-column: 2;
     grid-row: 2;
+    height: 300px;
 }
 
 .cross-grid .top-left {
     grid-column: 1;
     grid-row: 1;
+    height: 300px;
 }
 .cross-grid .top-right {
     grid-column: 3;
     grid-row: 1;
+    height: 300px;
 }
 .cross-grid .bottom-left {
     grid-column: 1;
     grid-row: 3;
+    height: 300px;
 }
 .cross-grid .bottom-right {
     grid-column: 3;
     grid-row: 3;
+    height: 300px;
 }
 .cross-grid img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
-    padding: 20px;
+    display: flex;
+    border-radius: 15px;
+    padding: 2px;
 }
 .nav {
     background-color: #4f02ca;
@@ -124,9 +142,18 @@ gap: 15px;
 }
 .nav a {
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
 }
 .nav a:hover {
     text-decoration: underline;
     color: #ffa600;
+}
+.login-button {
+    padding: 10px;
+    background-color: #4f02ca;
+    color: white;
+    border: 2px solid #4f02ca;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
 }
